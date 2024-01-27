@@ -1,14 +1,16 @@
 @charset "UTF-8";
 
+/* 共通スタイル */
 body {
   background-color: #e7e7e7;
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
   color: aliceblue;
-  margin: 0; /* ページ全体のマージンを削除 */
+  margin: 0;
 }
 
+/* ヘッダースタイル */
 header {
-  background-color:#000;
+  background-color: #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,14 +25,34 @@ header img {
 
 nav ul {
   display: flex;
-  list-style: none; /* リストスタイルを削除 */
-  padding: 0; /* リストのパディングを削除 */
+  list-style: none;
+  padding: 0;
 }
 
 nav ul li {
   margin-right: 20px;
 }
 
+/* スマートフォン用のメニューを非表示にする */
+.mobile-menu {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* ハンバーガーアイコンのバーのスタイル */
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px auto;
+  transition: 0.4s;
+}
+
+
+/* 記事関連スタイル */
 article {
   position: relative;
 }
@@ -43,9 +65,9 @@ article {
 
 .eyecatch-message {
   position: absolute;
-  top: 10%; /* 上から50%の位置に設定 */
-  left: 50%; /* 左から50%の位置に設定 */
-  transform: translate(-50%,-50%);
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   padding: 20px;
@@ -54,21 +76,24 @@ article {
 }
 
 .eyecatch-message-title {
-  font-size: 36px; /* フォントサイズを調整 */
-  margin-bottom: 10px; /* マージンを調整 */
+  font-size: 36px;
+  margin-bottom: 10px;
 }
 
-.eyecatch-message-submessage {
-  font-size: 24px; /* フォントサイズを調整 */
+.eyecatch-message-submessage,
+.eyecatch-message-submessage span {
+  font-size: 24px;
   font-family: 'Hind', sans-serif;
   margin-top: 10px;
 }
 
 .eyecatch-message-submessage span {
   display: block;
-  font-size: 36px; /* フォントサイズを調整 */
-  font-family: 'Hind', sans-serif;
-  margin-top: 10px;
+}
+
+/* コンセプトセクションスタイル */
+.concept, .service {
+  padding-bottom: 60px;
 }
 
 .concept {
@@ -76,13 +101,13 @@ article {
   color: #333;
 }
 
+/* サービスセクションスタイル */
 .service {
   background-color: #000;
   color: #fff;
-  padding-bottom: 60px;
 }
 
-.service > .section-container {
+.service > .section-container, .access > .section-container {
   background-color: #000;
 }
 
@@ -90,15 +115,13 @@ article {
   padding: 100px;
   max-width: 1600px;
   margin: 0 auto;
-  background-color: #e7e7e7;
 }
 
 .section-container h2 {
   text-align: center;
   font-size: 48px;
-  font-weight: 600;
   color: #f38b06;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 1;
 }
 
@@ -120,6 +143,7 @@ article {
   color: #fff;
 }
 
+/* 価格セクションスタイル */
 .price {
   padding-bottom: 60px;
 }
@@ -127,6 +151,8 @@ article {
 .price-container {
   background-color: aliceblue;
   color: #333;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .price-container h3 {
@@ -136,11 +162,7 @@ article {
   margin-bottom: 32px;
 }
 
-.price-container {
-  max-width: 1000px;
-  margin: auto;
-}
-
+/* アクセスセクションスタイル */
 .access {
   background-color: #000;
   color: #fff;
@@ -148,22 +170,19 @@ article {
   padding-right: 16px;
   padding-bottom: 60px;
 }
-
 .access > .section-container {
-  background-color: #e7e7e7;
   background-color: #000;
 }
 
-.access-container-right {
-  width: 50%;
+.access-container-right, .access-container-left {
+  width: 45%;
+  margin: auto;
 }
 
-.access-container-left {
-  width: 50%;
-}
 
-.access-container-left  p{
-  margin: 0px;
+.access-container-right p, .access-container-left p {
+  display: block;
+  margin: 0;
 }
 
 .map {
@@ -175,10 +194,7 @@ article {
   display: block;
 }
 
-
-
-
-
+/* フッタースタイル */
 .footer {
   padding: 2rem;
   font-size: 15px;
@@ -193,6 +209,7 @@ article {
 
 .footer__navi li {
   display: inline-block;
+  margin-right: 16px;
 }
 
 .footer__navi li:not(:last-child) {
@@ -204,6 +221,7 @@ article {
   margin-bottom: 1rem;
 }
 
+/* タブレット用のスタイル */
 @media (min-width: 768px) {
   .md-flex {
     display: flex;
@@ -218,22 +236,14 @@ article {
   }
 }
 
+/* タブレット用のスタイル */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  header img {
+    max-width: 120px;
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* 休診日スタイル */
 .biz-hour {
   display: block;
   border-collapse: collapse;
@@ -241,20 +251,16 @@ article {
 }
 
 .biz-hour th {
-  /* １番上の線 */
-  /* #A28C63っていうのが色の名前なので、ここをお好みで */
   border-top: 1px solid #A28C63;
 }
 
 .biz-hour th, .biz-hour td {
   padding: 10px 20px;
   text-align: center;
-  /* ２番目以降の線 */
-  /* 色はお好みで */
   border-bottom: 1px solid #A28C63;
 }
 
-/* スマホ時に横スクロールしないよう、横の余白（padding）を20px→10pxに */
+/* スマホ時の休診日スタイル */
 @media screen and (max-width: 559px) {
   .biz-hour {
     overflow-x: scroll;
@@ -269,122 +275,15 @@ article {
   font-weight: normal;
 }
 
-/* 「土」の文字色 */
 .biz-hour th.sat {
   color: #3db2da;
 }
 
-/* 「日」の文字色 */
 .biz-hour th.sun {
   color: #e66a6a;
 }
 
-
-
-/* スマートフォン用のスタイル */
-@media screen and (max-width: 767px) {
-  header {
-    padding: 20px;
-  }
-
-  header img {
-    max-width: 100px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  .eyecatch img {
-    height: auto;
-  }
-
-  .eyecatch-message {
-    position: absolute;
-    top: 6%; /* 上から50%の位置に設定 */
-    left: 50%; /* 左から50%の位置に設定 */
-    transform: translate(-50%,-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    font-size: 18px;
-  }
-
-  .eyecatch-message-title {
-    font-size: 28px;
-  }
-
-  .eyecatch-message-submessage {
-    font-size: 18px;
-    margin-top: 5px;
-  }
-
-  .eyecatch-message-submessage span {
-    font-size: 28px;
-    margin-top: 5px;
-  }
-
-  .section-container {
-    padding: 50px;
-  }
-
-  .section-container h2 {
-    font-size: 36px;
-  }
-
-  .section-container span {
-    font-size: 18px;
-  }
-
-  .generic-container,
-  .reverse-generic-container {
-    flex-direction: column;
-  }
-
-  .generic-container img,
-  .reverse-generic-container img {
-    max-width: 100%;
-  }
-
-  .generic-container h3,
-  .reverse-generic-container h3 {
-    font-size: 24px;
-  }
-
-  .generic-container p,
-  .reverse-generic-container p {
-    font-size: 18px;
-    padding: 16px;
-  }
-
-  .map {
-    margin: 32px auto;
-  }
-
-  .map iframe {
-    height: 300px;
-  }
-}
-
-/* タブレット用のスタイル */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  header img {
-    max-width: 120px;
-  }
-}
-
-
-
-
-
-
-
-/* テーブルに適用するスタイル */
+/* テーブルスタイル */
 table.course-table {
   border-collapse: collapse;
   margin: 0 auto;
@@ -399,38 +298,45 @@ table.course-table tr {
   padding: .35em;
   border-bottom: 1px solid #bbb;
 }
+
 table.course-table thead {
   border-bottom: 5px solid #ff9900;
 }
+
 table.course-table tr:last-child {
   border-bottom: none;
 }
-table.course-table th,
-table.course-table td {
+
+table.course-table th, table.course-table td {
   padding: 1em 10px 1em 1em;
   border-right: 1px solid #bbb;
 }
-table.course-table th:last-child,
-table.course-table td:last-child {
+
+table.course-table th:last-child, table.course-table td:last-child {
   border: none;
 }
+
 table.course-table tbody th {
   color: #ff9901;
 }
+
 table.course-table .txt {
   text-align: left;
   font-size: .85em;
 }
+
 table.course-table .price {
   text-align: right;
 }
 
+/* スマホ時のテーブルスタイル */
 @media screen and (max-width: 768px) {
   table.course-table {
     border: 0;
     width: 100%;
     overflow: scroll hidden;
   }
+
   table.course-table th {
     display: block;
     border-right: none;
@@ -438,6 +344,7 @@ table.course-table .price {
     padding-bottom: .6em;
     margin-bottom: .6em;
   }
+
   table.course-table thead {
     border: none;
     clip: rect(0 0 0 0);
@@ -448,10 +355,12 @@ table.course-table .price {
     position: absolute;
     width: 1px;
   }
+
   table.course-table tr {
     display: block;
     margin-bottom: 2em;
   }
+
   table.course-table td {
     border-bottom: 1px solid #bbb;
     display: block;
@@ -461,48 +370,34 @@ table.course-table .price {
     padding: .625em .625em .625em 4em;
     border-right: none;
   }
+
   table.course-table td::before {
     content: attr(data-label);
     font-weight: bold;
     position: absolute;
     left: 10px;
   }
+
   table.course-table td:last-child {
     border-bottom: 0;
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 汎用的なコンテナスタイル */
-.generic-container {
+.generic-container, .reverse-generic-container {
   display: flex;
   max-width: 1600px;
   margin: 64px auto;
 }
 
 /* 汎用的なイメージスタイル */
-.generic-container img {
+.generic-container img, .reverse-generic-container img {
   max-width: 1600px;
   width: 100%;
 }
 
 /* 汎用的なタイトルスタイル */
-.generic-container h3 {
+.generic-container h3, .reverse-generic-container h3 {
   font-size: 24px;
   padding-left: 32px;
   font-weight: bold;
@@ -510,39 +405,111 @@ table.course-table .price {
 }
 
 /* 汎用的なテキストスタイル */
-.generic-container p {
+.generic-container p, .reverse-generic-container p {
   font-size: 24px;
   padding: 16px 16px 16px 32px;
   line-height: 1.6;
 }
 
+/* スマートフォン用のスタイル */
+@media screen and (max-width: 767px) {
+  header {
+    padding: 20px;
+  }
 
+  header img {
+    max-width: 100px;
+  }
 
-/* 汎用的なコンテナスタイル */
-.reverse-generic-container {
-  display: flex;
-  max-width: 1600px;
-  margin: 0 auto;
-  flex-direction: row-reverse; /* 左右の配置を逆にする */
+  nav ul {
+    display: none;
+  }
+
+  .eyecatch img {
+    height: auto;
+  }
+
+  .eyecatch-message {
+    display: none;
+  }
+
+  .section-container {
+    padding: 50px;
+  }
+
+  .section-container h2 {
+    font-size: 36px;
+  }
+
+  .section-container span {
+    font-size: 18px;
+  }
+
+  .generic-container, .reverse-generic-container {
+    flex-direction: column;
+  }
+
+  .generic-container div h3 {
+    margin-right: 16px;
+    margin-top: 32px;
+  }
+
+  .reverse-generic-container div h3 {
+    margin-top: 32px;
+    margin-left: 16px;
+  }
+
+  .generic-container img, .reverse-generic-container img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .generic-container h3, .reverse-generic-container h3 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.6;
+  }
+
+  .generic-container p, .reverse-generic-container p {
+    font-size: 18px;
+    padding: 16px;
+    line-height: 1.6;
+  }
+
+  .map {
+    margin: 32px auto;
+  }
+
+  .map iframe {
+    height: 300px;
+  }
 }
 
-/* 汎用的なイメージスタイル */
-.reverse-generic-container img {
-  max-width: 1600px;
-  width: 100%;
-}
+/* スマートフォン用のスタイル */
+@media screen and (max-width: 767px) {
+  header nav ul {
+    display: none; /* メニューを非表示にする */
+  }
 
-/* 汎用的なタイトルスタイル */
-.reverse-generic-container h3 {
-  padding-left: 16px;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 1.6;
-}
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 1000;
+  }
 
-/* 汎用的なテキストスタイル */
-.reverse-generic-container p {
-  font-size: 24px;
-  padding: 32px 16px 16px 16px;
-  line-height: 1.6;
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .mobile-menu open {
+    display: block; /* モバイルメニューを表示 */
+  }
 }
