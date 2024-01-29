@@ -4,7 +4,6 @@
 body {
   background-color: #e7e7e7;
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
-  color: aliceblue;
   margin: 0;
 }
 
@@ -468,7 +467,7 @@ table.course-table .price {
     margin-right: 16px;
     margin-top: 32px;
   }
-  
+
   .generic-container div h3,
   .reverse-generic-container div h3 {
     margin-top: 32px;
