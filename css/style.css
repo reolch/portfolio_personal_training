@@ -151,7 +151,6 @@ article {
 }
 
 .price-container {
-  background-color: aliceblue;
   color: #333;
   max-width: 1000px;
   margin: auto;
@@ -469,7 +468,8 @@ table.course-table .price {
     margin-right: 16px;
     margin-top: 32px;
   }
-
+  
+  .generic-container div h3,
   .reverse-generic-container div h3 {
     margin-top: 32px;
     margin-left: 16px;
@@ -487,6 +487,7 @@ table.course-table .price {
   .reverse-generic-container h3 {
     font-size: 24px;
     font-weight: bold;
+    padding-left: 0px;
     line-height: 1.6;
   }
 
@@ -495,6 +496,10 @@ table.course-table .price {
     font-size: 18px;
     padding: 16px;
     line-height: 1.6;
+  }
+
+  .price-container {
+    width: 85%;
   }
 
   .access-container-left {
