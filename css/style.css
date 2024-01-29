@@ -301,8 +301,6 @@ table.course-table {
 }
 
 table.course-table tr {
-  background-color: #fff;
-  padding: .35em;
   border-bottom: 1px solid #bbb;
 }
 
@@ -368,6 +366,7 @@ table.course-table .price {
   table.course-table tr {
     display: block;
     margin-bottom: 2em;
+    max-width: 90%;
   }
 
   table.course-table td {
