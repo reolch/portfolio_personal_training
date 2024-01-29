@@ -92,7 +92,8 @@ article {
 }
 
 /* コンセプトセクションスタイル */
-.concept, .service {
+.concept,
+.service {
   padding-bottom: 60px;
 }
 
@@ -107,7 +108,8 @@ article {
   color: #fff;
 }
 
-.service > .section-container, .access > .section-container {
+.service>.section-container,
+.access>.section-container {
   background-color: #000;
 }
 
@@ -170,17 +172,20 @@ article {
   padding-right: 16px;
   padding-bottom: 60px;
 }
-.access > .section-container {
+
+.access>.section-container {
   background-color: #000;
 }
 
-.access-container-right, .access-container-left {
+.access-container-right,
+.access-container-left {
   width: 45%;
   margin: auto;
 }
 
 
-.access-container-right p, .access-container-left p {
+.access-container-right p,
+.access-container-left p {
   display: block;
   margin: 0;
 }
@@ -254,19 +259,23 @@ article {
   border-top: 1px solid #A28C63;
 }
 
-.biz-hour th, .biz-hour td {
+.biz-hour th,
+.biz-hour td {
   padding: 10px 20px;
   text-align: center;
   border-bottom: 1px solid #A28C63;
 }
 
 /* スマホ時の休診日スタイル */
-@media screen and (max-width: 559px) {
+@media screen and (max-width: 768px) {
+
   .biz-hour {
-    overflow-x: scroll;
+    max-width: 100%;
+    margin: 0 auto;
   }
 
-  .biz-hour th, .biz-hour td {
+  .biz-hour th,
+  .biz-hour td {
     padding: 10px 10px;
   }
 }
@@ -307,12 +316,14 @@ table.course-table tr:last-child {
   border-bottom: none;
 }
 
-table.course-table th, table.course-table td {
+table.course-table th,
+table.course-table td {
   padding: 1em 10px 1em 1em;
   border-right: 1px solid #bbb;
 }
 
-table.course-table th:last-child, table.course-table td:last-child {
+table.course-table th:last-child,
+table.course-table td:last-child {
   border: none;
 }
 
@@ -384,20 +395,23 @@ table.course-table .price {
 }
 
 /* 汎用的なコンテナスタイル */
-.generic-container, .reverse-generic-container {
+.generic-container,
+.reverse-generic-container {
   display: flex;
   max-width: 1600px;
   margin: 64px auto;
 }
 
 /* 汎用的なイメージスタイル */
-.generic-container img, .reverse-generic-container img {
+.generic-container img,
+.reverse-generic-container img {
   max-width: 1600px;
   width: 100%;
 }
 
 /* 汎用的なタイトルスタイル */
-.generic-container h3, .reverse-generic-container h3 {
+.generic-container h3,
+.reverse-generic-container h3 {
   font-size: 24px;
   padding-left: 32px;
   font-weight: bold;
@@ -405,7 +419,8 @@ table.course-table .price {
 }
 
 /* 汎用的なテキストスタイル */
-.generic-container p, .reverse-generic-container p {
+.generic-container p,
+.reverse-generic-container p {
   font-size: 24px;
   padding: 16px 16px 16px 32px;
   line-height: 1.6;
@@ -445,7 +460,8 @@ table.course-table .price {
     font-size: 18px;
   }
 
-  .generic-container, .reverse-generic-container {
+  .generic-container,
+  .reverse-generic-container {
     flex-direction: column;
   }
 
@@ -459,23 +475,74 @@ table.course-table .price {
     margin-left: 16px;
   }
 
-  .generic-container img, .reverse-generic-container img {
+  .generic-container img,
+  .reverse-generic-container img {
     width: 100%;
     max-width: 100%;
     height: auto;
     object-fit: cover;
   }
 
-  .generic-container h3, .reverse-generic-container h3 {
+  .generic-container h3,
+  .reverse-generic-container h3 {
     font-size: 24px;
     font-weight: bold;
     line-height: 1.6;
   }
 
-  .generic-container p, .reverse-generic-container p {
+  .generic-container p,
+  .reverse-generic-container p {
     font-size: 18px;
     padding: 16px;
     line-height: 1.6;
+  }
+
+  .access-container-left {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .access-container-left h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .access-container-left  {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .access-container-right {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .access-container-left h3 {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+
+  .access-container-left p {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .biz-hour {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+  }
+
+  .access-container-left-attension {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .access-container-left-attension {
+    text-align: center;
   }
 
   .map {
@@ -490,7 +557,8 @@ table.course-table .price {
 /* スマートフォン用のスタイル */
 @media screen and (max-width: 767px) {
   header nav ul {
-    display: none; /* メニューを非表示にする */
+    display: none;
+    /* メニューを非表示にする */
   }
 
   .menu-toggle {
@@ -510,6 +578,7 @@ table.course-table .price {
   }
 
   .mobile-menu open {
-    display: block; /* モバイルメニューを表示 */
+    display: block;
+    /* モバイルメニューを表示 */
   }
 }
