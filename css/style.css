@@ -50,7 +50,6 @@ nav ul li {
   transition: 0.4s;
 }
 
-
 /* 記事関連スタイル */
 article {
   position: relative;
@@ -107,8 +106,8 @@ article {
   color: #fff;
 }
 
-.service>.section-container,
-.access>.section-container {
+.service > .section-container,
+.access > .section-container {
   background-color: #000;
 }
 
@@ -171,7 +170,7 @@ article {
   padding-bottom: 60px;
 }
 
-.access>.section-container {
+.access > .section-container {
   background-color: #000;
 }
 
@@ -180,7 +179,6 @@ article {
   width: 45%;
   margin: auto;
 }
-
 
 .access-container-right p,
 .access-container-left p {
@@ -239,13 +237,6 @@ article {
   }
 }
 
-/* タブレット用のスタイル */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  header img {
-    max-width: 120px;
-  }
-}
-
 /* 休診日スタイル */
 .biz-hour {
   display: block;
@@ -266,7 +257,6 @@ article {
 
 /* スマホ時の休診日スタイル */
 @media screen and (max-width: 768px) {
-
   .biz-hour {
     max-width: 100%;
     margin: 0 auto;
@@ -293,9 +283,9 @@ article {
 /* テーブルスタイル */
 table.course-table {
   border-collapse: collapse;
+  max-width: 90%;
   margin: 0 auto;
   padding: 0;
-  width: 650px;
   table-layout: fixed;
   color: #000;
 }
@@ -530,7 +520,6 @@ table.course-table .price {
     display: flex;
     align-items: center;
     justify-content: center;
-
   }
 
   .biz-hour {
